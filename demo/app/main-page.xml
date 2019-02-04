@@ -3,14 +3,14 @@
     <ActionBar title="NativeScript-Paint" color="#fff" backgroundColor="#3489db" />
     <ScrollView>
         <StackLayout>
-            <PaintPad:PaintPad backgroundColor="#222" id="paintPad" margin="10" height="280" drawColor="{{ drawColor }}" drawWidth="{{ drawWidth }}" />
+            <PaintPad:PaintPad backgroundColor="#333" id="paintPad" margin="10" height="280" drawColor="{{ drawColor }}" drawWidth="{{ drawWidth }}" />
             <Image src="{{ drawingImage }}" height="80" visibility="{{ drawingImage ? 'visible' : 'collapsed' }}" stretch="aspectFit" />
 
             <StackLayout orientation="horizontal">
-                <Button text="Get Image" tap="{{ getMyDrawing }}" />
+                <Button text="Get Image" tap="{{ getMyPainting }}" />
             </StackLayout>
             <StackLayout orientation="horizontal">
-                <Button text="Clear" tap="{{ clearMyDrawing }}" />
+                <Button text="Clear" tap="{{ clearMyPainting }}" />
             </StackLayout>
             <GridLayout padding="10" rows="*, *" columns="*, *">
                 <Label text="Drawing Width:" class="message" textWrap="true" row="0" col="0" />

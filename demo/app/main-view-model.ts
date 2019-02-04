@@ -17,7 +17,7 @@ export class HelloWorldModel extends Observable {
 
 	constructor(mainPage: Page) {
 		super();
-		this._myPaintPad = mainPage.getViewById('paintPad') as Paint;
+		this._myPaintPad = mainPage.getViewById('paintPad') as PaintPad;
 		//this._colorPicker = new ColorPicker();
 	}
 
