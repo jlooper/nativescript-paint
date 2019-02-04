@@ -3,13 +3,12 @@
 
 import { Color } from 'tns-core-modules/color';
 import { PaintPadBase, drawColorProperty, drawWidthProperty, drawOpacityProperty } from './paint.common';
-import { colorProperty } from 'tns-core-modules/ui/page/page';
 
 export class PaintPad extends PaintPadBase {
 	public nativeView: DAScratchPadView;
 	constructor() {
 		super();
-		this.nativeView = DAScratchPadView.alloc().initWithFrame(CGRectMake(30.0, 30.0, 150.0, 150.0));
+		this.nativeView = DAScratchPadView.alloc().initWithFrame(CGRectMake(0, 0, 100, 100));
 		this.nativeView.clipsToBounds = true;
 	}
 
@@ -30,12 +29,12 @@ export class PaintPad extends PaintPadBase {
 	}
 
 	public onLoaded() {
-		/*if (this.width) {
-			this.nativeView.frame.size.width = this.width;
+		if (this.width) {
+			this.nativeView.frame.size.width = 300;
 		}
 		if (this.height) {
-			this.nativeView.frame.size.height = this.height;
-		}*/
+			this.nativeView.frame.size.height = 300;
+		}
 		super.onLoaded();
 	}
 
