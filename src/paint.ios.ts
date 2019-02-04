@@ -6,10 +6,20 @@ import { PaintPadBase, drawColorProperty, drawWidthProperty, drawOpacityProperty
 
 export class PaintPad extends PaintPadBase {
 	public nativeView: DAScratchPadView;
-	constructor() {
+	/*constructor() {
 		super();
 		this.nativeView = DAScratchPadView.alloc().initWithFrame(CGRectMake(0, 0, 100, 100));
 		this.nativeView.clipsToBounds = true;
+	}*/
+	createNativeView() {
+		const scratchPad = DAScratchPadView.alloc().initWithFrame(CGRectMake(0, 0, 100, 100));
+		scratchPad.clipsToBounds = true;
+		return scratchPad;
+	}
+
+	initNativeView() {
+		this.nativeView.clipsToBounds = true;
+		super.initNativeView();
 	}
 
 	get ios(): DAScratchPadView {
@@ -17,7 +27,14 @@ export class PaintPad extends PaintPadBase {
 	}
 
 	[drawWidthProperty.getDefault](): number {
+		console.log(this.nativeView);
 		return this.nativeView.drawWidth;
+	}
+
+	[drawWidthProperty.setNative](value: number) {
+		console.log('drawWidthProperty value:', value);
+		console.log('this.nativeView:', this.nativeView);
+		this.nativeView.drawWidth = value;
 	}
 
 	[drawColorProperty.getDefault](): UIColor {
@@ -28,7 +45,7 @@ export class PaintPad extends PaintPadBase {
 		return this.nativeView.drawOpacity;
 	}
 
-	public onLoaded() {
+	/*public onLoaded() {
 		if (this.width) {
 			this.nativeView.frame.size.width = 300;
 		}
@@ -36,7 +53,7 @@ export class PaintPad extends PaintPadBase {
 			this.nativeView.frame.size.height = 300;
 		}
 		super.onLoaded();
-	}
+	}*/
 
 	public getPainting(): Promise<any> {
 		return new Promise((resolve, reject) => {

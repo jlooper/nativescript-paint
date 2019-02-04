@@ -1,10 +1,9 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
-    xmlns:PaintPad="nativescript-paint" loaded="pageLoaded">
-    <ActionBar title="NativeScript-Paint" color="#fff" backgroundColor="#3489db" />
-    <ScrollView>
-        <StackLayout>
-            <PaintPad:PaintPad backgroundColor="#333" id="paintPad" margin="10" height="280" drawColor="{{ drawColor }}" drawWidth="{{ drawWidth }}" />
-            <Image src="{{ drawingImage }}" height="80" visibility="{{ drawingImage ? 'visible' : 'collapsed' }}" stretch="aspectFit" />
+    xmlns:PaintPad="nativescript-paint">
+    <ActionBar title="NativeScript-Painty" color="#fff" backgroundColor="#3489db" />
+        <StackLayout class="h-full" backgroundColor="blue">
+            <PaintPad:PaintPad backgroundColor="yellow" id="paintPad" margin="10" width="280" height="280" drawColor="{{ drawColor }}" drawWidth="{{ drawWidth }}" />
+            <!--<Image src="{{ drawingImage }}" height="80" visibility="{{ drawingImage ? 'visible' : 'collapsed' }}" stretch="aspectFit" />
 
             <StackLayout orientation="horizontal">
                 <Button text="Get Image" tap="{{ getMyPainting }}" />
@@ -16,7 +15,6 @@
                 <Label text="Drawing Width:" class="message" textWrap="true" row="0" col="0" />
                 <Label text="{{ drawWidth }}" class="message" textWrap="true" row="0" col="1" />
             </GridLayout>
-            <Slider margin="10" backgroundColor="#ff4801" id="widthSlider" value="{{ drawWidth }}" maxValue="20" minValue="1" />
+            <Slider margin="10" backgroundColor="#ff4801" id="widthSlider" value="{{ drawWidth }}" maxValue="20" minValue="1" />-->
         </StackLayout>
-    </ScrollView>
 </Page>
