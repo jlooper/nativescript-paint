@@ -11,4 +11,5 @@ export declare class PaintPad extends View {
 
 	getPainting(): Promise<any>;
 	clearPainting(): void;
+	setToolType(num): void;
 }

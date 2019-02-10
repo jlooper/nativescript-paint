@@ -1,25 +1,36 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
     xmlns:paint="nativescript-paint" loaded="pageLoaded">
-    <ActionBar title="NativeScript-Painty" color="#fff" backgroundColor="#3489db" />
+    <ActionBar title="NativeScript-Paint" color="#fff" backgroundColor="#3489db" />
     <ScrollView>
-      <StackLayout class="h-full" backgroundColor="#efefef">
+      <StackLayout backgroundColor="#efefef">
           <paint:PaintPad canvasColor="#fff" id="paintPad" margin="10" width="280" height="280" drawColor="{{ drawColor }}" drawWidth="{{ drawWidth }}" airBrushFlow="{{ airBrushFlow }}" />
           <Image src="{{ paintingImage }}" height="80" visibility="{{ paintingImage ? 'visible' : 'collapsed' }}" stretch="aspectFit" />
 
-          <StackLayout horizontalAlignment="center">
-              <Button text="Get Image" tap="{{ getMyPainting }}" class="btn btn-primary m-r-20" />
+          <StackLayout orientation="horizontal">
+              <Button text="Get" tap="{{ getMyPainting }}" class="btn btn-primary" />
               <Button text="Clear" tap="{{ clearMyPainting }}" class="btn btn-primary" />
+              <Button class="btn btn-primary" text="A" tap="{{ selectAirBrush }}"/>
+              <Button class="btn btn-primary" text="P" tap="{{ selectPaintBrush }}"/>
           </StackLayout>
+          
           <GridLayout padding="10" rows="auto" columns="auto, *">
-              <Label text="Drawing Width:" class="message" textWrap="true" row="0" col="0" />
+              <Label text="Width:" class="message" textWrap="true" row="0" col="0" />
               <Label text="{{ drawWidth }}" class="message" textWrap="true" row="0" col="1" />
           </GridLayout>
-          <Slider margin="10" backgroundColor="#ff4801" id="widthSlider" value="{{ drawWidth }}" maxValue="20" minValue="1" />
+          <Slider margin="10" backgroundColor="#ff4801" id="widthSlider" value="{{ drawWidth }}" maxValue="50" minValue="1" />
+          
+          <GridLayout padding="10" rows="auto" columns="auto, *">
+              <Label text="Opacity:" class="message" textWrap="true" row="0" col="0" />
+              <Label text="{{ drawOpacity }}" class="message" textWrap="true" row="0" col="1" />
+          </GridLayout>
+          <Slider margin="10" backgroundColor="#ff4801" id="opacitySlider" value="{{ drawOpacity }}" maxValue="1" minValue="0" />
+          
           <GridLayout padding="10" rows="auto" columns="auto, *">
               <Label text="AirBrush Flow:" class="message" textWrap="true" row="0" col="0" />
               <Label text="{{ airBrushFlow }}" class="message" textWrap="true" row="0" col="1" />
           </GridLayout>
           <Slider margin="10" backgroundColor="#ff4801" id="airBrushFlowSlider" value="{{ airBrushFlow }}" maxValue="1" minValue="0" />
+          
       </StackLayout>
     </ScrollView>
 </Page>
