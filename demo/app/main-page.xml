@@ -3,7 +3,7 @@
     <ActionBar title="NativeScript-Paint" color="#fff" backgroundColor="#3489db" />
     <ScrollView>
       <StackLayout backgroundColor="#efefef">
-          <paint:PaintPad canvasColor="#fff" id="paintPad" margin="10" width="280" height="280" drawColor="{{ drawColor }}" drawWidth="{{ drawWidth }}" airBrushFlow="{{ airBrushFlow }}" />
+          <paint:PaintPad canvasColor="#fff" id="paintPad" margin="10" width="280" height="280" drawColor="{{ drawColor }}" drawWidth="{{ drawWidth }}" airBrushFlow="{{ airBrushFlow }}" drawOpacity="{{ drawOpacity }}" />
           <Image src="{{ paintingImage }}" height="80" visibility="{{ paintingImage ? 'visible' : 'collapsed' }}" stretch="aspectFit" />
 
           <StackLayout orientation="horizontal">

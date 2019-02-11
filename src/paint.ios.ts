@@ -50,7 +50,6 @@ export class PaintPad extends PaintPadBase {
 	}
 
 	[drawOpacityProperty.setNative](value: number) {
-		console.log('opacityProperty:', value);
 		this.nativeView.drawOpacity = value;
 	}
 
