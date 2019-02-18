@@ -2,16 +2,17 @@
     xmlns:paint="nativescript-paint" loaded="pageLoaded">
     <ActionBar title="NativeScript-Paint" color="#fff" backgroundColor="#3489db" />
     <ScrollView>
-      <StackLayout backgroundColor="#efefef">
+      <StackLayout backgroundColor="#D2D9E5">
           <paint:PaintPad canvasColor="#fff" id="paintPad" margin="10" width="280" height="280" drawColor="{{ drawColor }}" drawWidth="{{ drawWidth }}" airBrushFlow="{{ airBrushFlow }}" drawOpacity="{{ drawOpacity }}" />
           <Image src="{{ paintingImage }}" height="80" visibility="{{ paintingImage ? 'visible' : 'collapsed' }}" stretch="aspectFit" />
 
-          <StackLayout orientation="horizontal">
-              <Button text="Get" tap="{{ getMyPainting }}" class="btn btn-primary" />
-              <Button text="Clear" tap="{{ clearMyPainting }}" class="btn btn-primary" />
-              <Button class="btn btn-primary" text="A" tap="{{ selectAirBrush }}"/>
-              <Button class="btn btn-primary" text="P" tap="{{ selectPaintBrush }}"/>
-          </StackLayout>
+          <WrapLayout orientation="horizontal" horizontalAlignment="center">
+              <Button text="Save" tap="{{ getMyPainting }}" class="btn btn-primary btn-rounded-sm"/>
+              <Button text="Clear" tap="{{ clearMyPainting }}"  class="btn btn-primary btn-rounded-sm"/>
+              <Button text="Color" tap="{{ pickColor }}"  class="btn btn-primary btn-rounded-sm"/>
+              <Button android:visibility="collapse" text="Airbrush" tap="{{ selectAirBrush }}" class="btn btn-primary btn-rounded-sm"/>
+              <Button android:visibility="collapse" text="Paintbrush" tap="{{ selectPaintBrush }}" class="btn btn-primary btn-rounded-sm"/>
+          </WrapLayout>
           
           <GridLayout padding="10" rows="auto" columns="auto, *">
               <Label text="Width:" class="message" textWrap="true" row="0" col="0" />
@@ -23,13 +24,13 @@
               <Label text="Opacity:" class="message" textWrap="true" row="0" col="0" />
               <Label text="{{ drawOpacity }}" class="message" textWrap="true" row="0" col="1" />
           </GridLayout>
-          <Slider margin="10" backgroundColor="#ff4801" id="opacitySlider" value="{{ drawOpacity }}" maxValue="1" minValue="0" />
+          <Slider margin="10" backgroundColor="#ff4801" id="opacitySlider" value="{{ drawOpacity }}" maxValue="{{ maxOpacity }}" minValue="0" />
           
-          <GridLayout padding="10" rows="auto" columns="auto, *">
+          <GridLayout android:visibility="collapse" padding="10" rows="auto" columns="auto, *">
               <Label text="AirBrush Flow:" class="message" textWrap="true" row="0" col="0" />
               <Label text="{{ airBrushFlow }}" class="message" textWrap="true" row="0" col="1" />
           </GridLayout>
-          <Slider margin="10" backgroundColor="#ff4801" id="airBrushFlowSlider" value="{{ airBrushFlow }}" maxValue="1" minValue="0" />
+          <Slider android:visibility="collapse" margin="10" backgroundColor="#ff4801" id="airBrushFlowSlider" value="{{ airBrushFlow }}" maxValue="1" minValue="0" />
           
       </StackLayout>
     </ScrollView>

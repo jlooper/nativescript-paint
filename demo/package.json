@@ -3,12 +3,16 @@
     "id": "org.nativescript.demo",
     "tns-ios": {
       "version": "5.1.1"
+    },
+    "tns-android": {
+      "version": "5.1.0"
     }
   },
   "dependencies": {
     "nativescript-theme-core": "^1.0.4",
     "nativescript-unit-test-runner": "^0.3.4",
     "nativescript-paint": "file:../src",
+    "nativescript-color-picker": "^1.5.0",
     "tns-core-modules": "^5.1.0"
   },
   "devDependencies": {
