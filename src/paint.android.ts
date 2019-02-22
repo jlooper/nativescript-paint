@@ -67,7 +67,7 @@ export class PaintPad extends PaintPadBase {
 		return new Promise((resolve, reject) => {
 			try {
 				const data = this.nativeView.getDrawScreenshot(
-					new com.rm.FreeDrawView.DrawCreatorListener({
+					this.nativeView.DrawCreatorListener({
 						onDrawCreated: (bm: android.graphics.Bitmap) => {
 							if (bm) {
 								resolve(fromNativeSource(bm));

@@ -41,7 +41,7 @@
 
         <GridLayout padding="10" rows="auto" columns="auto, *">
           <Label text="Width:" class="message" textWrap="true" row="0" col="0"/>
-          <Label ctext="drawWidth" class="message" textWrap="true" row="0" col="1"/>
+          <Label :text="drawWidth" class="message" textWrap="true" row="0" col="1"/>
         </GridLayout>
         <Slider
           margin="10"
