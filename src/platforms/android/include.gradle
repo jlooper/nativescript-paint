@@ -1,0 +1,3 @@
+dependencies {
+    implementation  'com.rm:freedrawview:1.1.2'
+}
