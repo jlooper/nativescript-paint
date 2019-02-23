@@ -66,14 +66,14 @@ export class PaintPad extends PaintPadBase {
 	public getPainting(): Promise<any> {
 		return new Promise((resolve, reject) => {
 			try {
-				const data = this.nativeView.getDrawScreenshot(
-					this.nativeView.DrawCreatorListener({
-						onDrawCreated: (bm: android.graphics.Bitmap) => {
-							if (bm) {
-								resolve(fromNativeSource(bm));
-							} else {
-								reject('Pad is empty.');
-							}
+				this.nativeView.getDrawScreenshot(
+					new com.rm.freedrawview.FreeDrawView.DrawCreatorListener({
+						onDrawCreated: function(drawing) {
+							resolve(fromNativeSource(drawing));
+						},
+
+						onDrawCreationError: function() {
+							reject('Pad is empty.');
 						},
 					})
 				);
