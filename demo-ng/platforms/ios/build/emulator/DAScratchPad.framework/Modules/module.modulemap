@@ -1,0 +1,6 @@
+framework module DAScratchPad {
+  umbrella header "DAScratchPad-umbrella.h"
+
+  export *
+  module * { export * }
+}

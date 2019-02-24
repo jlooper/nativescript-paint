@@ -1,0 +1,80 @@
+<ActionBar title="NativeScript-Paint for Angular" color="#fff" backgroundColor="#3489db"></ActionBar>
+<ScrollView>
+	<StackLayout backgroundColor="#D2D9E5">
+		<PaintPad
+			#PaintPad
+			canvasColor="#fff"
+			margin="10"
+			width="280"
+			height="280"
+			[drawColor]="drawColor"
+			[drawWidth]="drawWidth"
+			[airBrushFlow]="airBrushFlow"
+			[drawOpacity]="drawOpacity"
+		></PaintPad>
+		<Image
+			[src]="paintingImage"
+			height="80"
+			[visibility]="paintingImage ? 'visible' : 'collapsed'"
+			stretch="aspectFit"
+		></Image>
+
+		<WrapLayout orientation="horizontal" horizontalAlignment="center">
+			<Button text="Save" (tap)="getMyPainting()" class="btn btn-primary btn-rounded-sm"></Button>
+			<Button text="Clear" (tap)="clearMyPainting()" class="btn btn-primary btn-rounded-sm"></Button>
+			<Button text="Color" (tap)="pickColor()" class="btn btn-primary btn-rounded-sm"></Button>
+			<Button
+				android:visibility="collapse"
+				text="Airbrush"
+				(tap)="selectAirBrush()"
+				class="btn btn-primary btn-rounded-sm"
+			></Button>
+			<Button
+				android:visibility="collapse"
+				text="Paintbrush"
+				(tap)="selectPaintBrush()"
+				class="btn btn-primary btn-rounded-sm"
+			></Button>
+		</WrapLayout>
+
+		<GridLayout padding="10" rows="auto" columns="auto, *">
+			<Label text="Width:" class="message" textWrap="true" row="0" col="0"></Label>
+			<Label [text]="drawWidth" class="message" textWrap="true" row="0" col="1"></Label>
+		</GridLayout>
+		<Slider
+			margin="10"
+			backgroundColor="#ff4801"
+			id="widthSlider"
+			[(ngModel)]="drawWidth"
+			maxValue="50"
+			minValue="1"
+		></Slider>
+
+		<GridLayout padding="10" rows="auto" columns="auto, *">
+			<Label text="Opacity:" class="message" textWrap="true" row="0" col="0"></Label>
+			<Label (text)="drawOpacity" class="message" textWrap="true" row="0" col="1"></Label>
+		</GridLayout>
+		<Slider
+			margin="10"
+			backgroundColor="#ff4801"
+			id="opacitySlider"
+			[(ngModel)]="drawOpacity"
+			(maxValue)="maxOpacity"
+			minValue="0"
+		></Slider>
+
+		<GridLayout android:visibility="collapse" padding="10" rows="auto" columns="auto, *">
+			<Label text="AirBrush Flow:" class="message" textWrap="true" row="0" col="0"></Label>
+			<Label (text)="airBrushFlow" class="message" textWrap="true" row="0" col="1"></Label>
+		</GridLayout>
+		<Slider
+			android:visibility="collapse"
+			margin="10"
+			backgroundColor="#ff4801"
+			id="airBrushFlowSlider"
+			[(ngModel)]="airBrushFlow"
+			maxValue="1"
+			minValue="0"
+		></Slider>
+	</StackLayout>
+</ScrollView>

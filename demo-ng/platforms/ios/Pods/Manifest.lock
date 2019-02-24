@@ -1,0 +1,20 @@
+PODS:
+  - DAScratchPad (0.4)
+  - MSColorPicker (1.0.1)
+
+DEPENDENCIES:
+  - DAScratchPad
+  - MSColorPicker
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DAScratchPad
+    - MSColorPicker
+
+SPEC CHECKSUMS:
+  DAScratchPad: 0b772dc02fe8b77d9b75c75f2edb4514f3b7bb1f
+  MSColorPicker: 90b8663b99d6c5c3ba10ccfaa4a600b844f8738e
+
+PODFILE CHECKSUM: 5aa1f1844d155f9732c30b449040e38b65c80bcc
+
+COCOAPODS: 1.5.3

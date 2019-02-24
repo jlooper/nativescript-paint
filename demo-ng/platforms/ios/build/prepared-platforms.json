@@ -1,0 +1,22 @@
+{
+    "@angular/animations": true,
+    "@angular/common": true,
+    "@angular/compiler": true,
+    "@angular/core": true,
+    "@angular/forms": true,
+    "@angular/http": true,
+    "@angular/platform-browser": true,
+    "@angular/platform-browser-dynamic": true,
+    "@angular/router": true,
+    "nativescript-angular": true,
+    "nativescript-paint": true,
+    "nativescript-color-picker": true,
+    "nativescript-theme-core": true,
+    "reflect-metadata": true,
+    "rxjs": true,
+    "tns-core-modules": true,
+    "zone.js": true,
+    "tslib": true,
+    "nativescript-intl": true,
+    "tns-core-modules-widgets": true
+}

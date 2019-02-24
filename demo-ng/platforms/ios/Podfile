@@ -1,0 +1,12 @@
+use_frameworks!
+
+target "demong" do
+# Begin Podfile - /Users/looper/Documents/nativescript/nativescript-paint/demo-ng/node_modules/nativescript-color-picker/platforms/ios/Podfile
+pod "MSColorPicker"
+# End Podfile
+
+# Begin Podfile - /Users/looper/Documents/nativescript/nativescript-paint/demo-ng/node_modules/nativescript-paint/platforms/ios/Podfile
+platform :ios, '9.0'
+pod 'DAScratchPad'
+# End Podfile
+end
