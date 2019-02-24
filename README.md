@@ -50,21 +50,22 @@ registerElement('PaintPad', () => require('nativescript-paint').PaintPad);
 
 2. Add it to your markup
 
-```bash
+```js
 <PaintPad
     canvasColor="#fff"
-    id="paintPad"
-	[drawColor]="drawColor"
-	[drawWidth]="drawWidth"
-	[airBrushFlow]="airBrushFlow"
-	[drawOpacity]="drawOpacity"
+     #PaintPad			
+     [drawColor]="drawColor"
+     [drawWidth]="drawWidth"
+     [airBrushFlow]="airBrushFlow"
+     [drawOpacity]="drawOpacity"
 ></PaintPad>
 ```
 
 3. Reference the PaintPad by id to manipulate it
 
 ```js
-this.myPaintPad = this.mainPage.getViewById('paintPad') as PaintPad;
+@ViewChild('PaintPad') PaintPad: ElementRef;
+this.myPaintPad = this.PaintPad.nativeElement;
 ```
 
 #### Vue

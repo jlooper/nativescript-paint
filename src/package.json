@@ -1,7 +1,7 @@
 {
 	"name": "nativescript-paint",
 	"version": "1.0.0",
-	"description": "Your awesome NativeScript plugin.",
+	"description": "A plugin for painters!",
 	"main": "paint",
 	"typings": "index.d.ts",
 	"nativescript": {
