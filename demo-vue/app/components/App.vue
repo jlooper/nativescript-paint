@@ -48,6 +48,7 @@
           backgroundColor="#ff4801"
           id="widthSlider"
           :value="drawWidth"
+          @valueChange="widthChange($event)"
           maxValue="50"
           minValue="1"
         />
@@ -62,6 +63,7 @@
           id="opacitySlider"
           :value="drawOpacity"
           :maxValue="maxOpacity"
+          @valueChange="opacityChange($event)"
           minValue="0"
         />
 
@@ -75,6 +77,7 @@
           backgroundColor="#ff4801"
           id="airBrushFlowSlider"
           :value="airBrushFlow"
+          @valueChange="airbrushFlowChange($event)"
           maxValue="1"
           minValue="0"
         />
@@ -118,6 +121,18 @@ export default {
 
     selectPaintBrush() {
       this.$refs.paintPad.nativeView.setToolType(0);
+    },
+
+    drawWidthChange(event){
+      console.log(event.value)
+    },
+
+    opacityChange(event){
+      console.log(event.value)
+    },
+
+    airbrushFlowChange(event){
+      console.log(event.value)
     },
 
     pickColor() {
