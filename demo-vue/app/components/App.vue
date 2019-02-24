@@ -123,23 +123,23 @@ export default {
       this.$refs.paintPad.nativeView.setToolType(0);
     },
 
-    drawWidthChange(event){
-      console.log(event.value)
+    widthChange(event){
+      this.drawWidth = event.value
     },
 
     opacityChange(event){
-      console.log(event.value)
+      this.drawOpacity = event.value
     },
 
     airbrushFlowChange(event){
-      console.log(event.value)
+      this.airbrushFlowChange = event.value
     },
 
     pickColor() {
       this._colorPicker
         .show("#3489db", "HEX")
         .then(result => {
-          this.set("drawColor", result);
+          this.drawColor = result;
         })
         .catch(err => {
           console.log(err);
