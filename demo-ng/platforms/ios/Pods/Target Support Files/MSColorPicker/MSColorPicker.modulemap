@@ -1,6 +1,0 @@
-framework module MSColorPicker {
-  umbrella header "MSColorPicker-umbrella.h"
-
-  export *
-  module * { export * }
-}
