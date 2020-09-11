@@ -1,5 +1,4 @@
-import { View, Property } from 'tns-core-modules/ui/core/view';
-import { Color } from 'tns-core-modules/color';
+import { View, Property } from '@nativescript/core/ui/core/view';
 
 export class PaintPadBase extends View {
 

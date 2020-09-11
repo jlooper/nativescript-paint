@@ -1,4 +1,6 @@
-import { Color } from 'tns-core-modules/color';
+/// <reference path="./node_modules/@nativescript/types/index.d.ts" />
+
+import { Color } from '@nativescript/core/color';
 import {
 	PaintPadBase,
 	drawColorProperty,
@@ -7,7 +9,7 @@ import {
 	canvasColorProperty,
 	airBrushFlowProperty,
 } from './paint.common';
-import { fromNativeSource } from 'tns-core-modules/image-source';
+import { fromNativeSource } from '@nativescript/core/image-source';
 
 export class PaintPad extends PaintPadBase {
 	public nativeView: DAScratchPadView;

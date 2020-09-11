@@ -1,3 +1,7 @@
+# NativeScript 7.0+
+
+Use version 1.1.0 of the plugin
+
 # NativeScript Paint
 
 ![apple](https://cdn3.iconfinder.com/data/icons/picons-social/57/16-apple-32.png) ![android](https://cdn4.iconfinder.com/data/icons/logos-3/228/android-32.png)
