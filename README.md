@@ -1,6 +1,6 @@
 # NativeScript 7.0+
 
-Use version 1.1.0 of the plugin
+Use version 2.1.0 of the plugin
 
 # NativeScript Paint
 
