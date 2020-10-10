@@ -1,7 +1,6 @@
-//export class Paint extends PaintBase {}
-/// <reference path="./node_modules/tns-platform-declarations/android.d.ts" />
+/// <reference path="./node_modules/@nativescript/types/index.d.ts" />
 
-import { Color } from 'tns-core-modules/color';
+import { Color } from '@nativescript/core/color';
 import {
 	PaintPadBase,
 	drawColorProperty,
@@ -9,7 +8,7 @@ import {
 	drawOpacityProperty,
 	canvasColorProperty,
 } from './paint.common';
-import { fromNativeSource } from 'tns-core-modules/image-source';
+import { fromNativeSource } from '@nativescript/core/image-source';
 
 declare var com: any;
 
