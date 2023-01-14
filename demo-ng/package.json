@@ -27,7 +27,7 @@
     "@angular/compiler-cli": "~10.1.0",
     "@nativescript/android": "7.0.0",
     "@nativescript/types": "~7.0.0",
-    "@nativescript/webpack": "~3.0.0",
+    "@nativescript/webpack": "~5.0.12",
     "@ngtools/webpack": "~10.1.0",
     "@types/node": "^14.6.4",
     "typescript": "~3.9.0"
